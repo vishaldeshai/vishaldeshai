@@ -17,4 +17,4 @@
 5. Export with PDF or Word.
 
 ## Pages
-- [Home and editor](https://www.yourdomain.com/): the editor, a how-to guide and FAQ
+- [Home and editor](https://vishaldeshai.github.io/): the editor, a how-to guide and FAQ
