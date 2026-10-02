@@ -1,0 +1,20 @@
+# ResuFlex
+
+> ResuFlex is a free, browser-based resume builder. Every section can be split side by side or stacked and resized by dragging dividers (with snapping to 25/33/50/66/75%). A + button inside each section adds labels, paragraphs and bullet lists, and a formatting toolbar applies bold, italic, underline, bulleted and numbered lists, alignment, font family and size. Resumes export to PDF (via the browser's print dialog) and DOCX. No account; data is stored in the user's browser.
+
+## Key facts
+- Price: free, no sign-up
+- Storage: browser local storage on the user's device; nothing is uploaded
+- Exports: PDF (print dialog), DOCX
+- Layout tools: split side by side / stacked, drag or arrow-key resize, ratio presets 25/75 to 75/25, min/max size per section
+- Section types: Header, Summary, Experience, Skills, Education, Projects, Custom
+
+## How to use
+1. Click a section on the resume page to select it.
+2. Split it side by side or stacked in the Properties panel; drag dividers to resize.
+3. Click + inside a section to add a Label, Paragraph or Bullet list.
+4. Click into text to open the formatting toolbar.
+5. Export with PDF or DOCX.
+
+## Pages
+- [Editor](https://vishaldeshai.github.io/): the resume editor
