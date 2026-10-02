@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="ResuFlex is a free online resume builder with resizable split sections. Add text blocks with one click, format with bullets, alignment and fonts, then export to PDF or Word.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<link rel="canonical" href="https://www.yourdomain.com/">
+<link rel="canonical" href="https://vishaldeshai.github.io/">
 <meta name="theme-color" content="#2f5bea">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ResuFlex">
 <meta property="og:title" content="ResuFlex – Resume builder with resizable split sections">
 <meta property="og:description" content="Split any resume section, drag dividers to resize, add text with the + button and format it with bullets, alignment and fonts. Export to PDF or Word.">
-<meta property="og:url" content="https://www.yourdomain.com/">
-<meta property="og:image" content="https://www.yourdomain.com/og-image.png">
+<meta property="og:url" content="https://vishaldeshai.github.io/">
+<meta property="og:image" content="https://vishaldeshai.github.io/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ResuFlex – Resume builder with resizable split sections">
 <meta name="twitter:description" content="Split, resize and format every resume section. Export to PDF or Word. Free, no sign-up.">
@@ -27,28 +27,28 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://www.yourdomain.com/#website",
-      "url": "https://www.yourdomain.com/",
+      "@id": "https://vishaldeshai.github.io/#website",
+      "url": "https://vishaldeshai.github.io/",
       "name": "ResuFlex",
       "inLanguage": "en"
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.yourdomain.com/#webpage",
-      "url": "https://www.yourdomain.com/",
+      "@id": "https://vishaldeshai.github.io/#webpage",
+      "url": "https://vishaldeshai.github.io/",
       "name": "ResuFlex – Resume builder with resizable split sections",
-      "isPartOf": {"@id": "https://www.yourdomain.com/#website"},
-      "about": {"@id": "https://www.yourdomain.com/#app"},
+      "isPartOf": {"@id": "https://vishaldeshai.github.io/#website"},
+      "about": {"@id": "https://vishaldeshai.github.io/#app"},
       "dateModified": "2026-10-02",
       "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".answer-lead", ".faq p"]}
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "https://www.yourdomain.com/#app",
+      "@id": "https://vishaldeshai.github.io/#app",
       "name": "ResuFlex",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Any (web browser)",
-      "url": "https://www.yourdomain.com/",
+      "url": "https://vishaldeshai.github.io/",
       "description": "Online resume builder where every section can be split side by side or top to bottom, resized by dragging dividers, filled with text blocks from a + button, and formatted with bullets, alignment, fonts, sizes and colors.",
       "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
       "featureList": [
@@ -118,6 +118,7 @@
   --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.45); color-scheme:dark;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 var(--f-ui);-webkit-font-smoothing:antialiased}
 button,select,input{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -220,13 +221,6 @@ button,select,input{font:inherit;color:inherit}
 .blk-mono .editable{font-family:'IBM Plex Mono',Consolas,monospace;font-size:.84em;color:var(--ink-soft)}
 .blk-text .editable,.blk-bullets .editable{color:var(--ink)}
 
-.blk-tools{position:absolute;top:-11px;right:-4px;display:flex;gap:2px;opacity:0;pointer-events:none;transition:opacity .12s;z-index:4;transform:scale(var(--inv,1));transform-origin:100% 0}
-@media (pointer:coarse){.blk-tools{top:-30px}.blk-tools button{width:30px;height:30px}.blk-tools svg{width:14px;height:14px}}
-.section.sel .blk:hover > .blk-tools,.section.sel .blk:focus-within > .blk-tools{opacity:1;pointer-events:auto}
-.blk-tools button{width:22px;height:22px;display:grid;place-items:center;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:5px;cursor:pointer;padding:0}
-.blk-tools button:hover{background:var(--surface-2)}
-.blk-tools svg{width:12px;height:12px}
-
 .add-btn{position:absolute;right:8px;bottom:8px;width:28px;height:28px;border-radius:50%;border:1.5px dashed var(--accent);background:var(--paper);color:var(--accent);display:grid;place-items:center;cursor:pointer;opacity:0;transition:opacity .12s;z-index:5;padding:0;transform:scale(var(--inv,1));transform-origin:100% 100%}
 .add-btn svg{width:14px;height:14px}
 .section:hover .add-btn,.section.sel .add-btn,.add-btn:focus-visible{opacity:1}
@@ -234,7 +228,7 @@ button,select,input{font:inherit;color:inherit}
 @media (pointer:coarse){.add-btn{width:40px;height:40px}.add-btn svg{width:18px;height:18px}}
 .add-btn[aria-expanded="true"]{opacity:1;background:var(--accent);color:var(--accent-ink);border-style:solid}
 @media (hover:none){.section.sel .add-btn{opacity:1}}
-.add-menu{position:absolute;right:8px;bottom:calc(42px * var(--inv,1));transform:scale(var(--inv,1));transform-origin:100% 100%;z-index:6;width:198px;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:5px;display:grid;gap:1px;font:13px/1.3 var(--f-ui);text-align:left}
+.add-menu{position:fixed;z-index:75;width:210px;max-height:calc(100vh - 24px);overflow:auto;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:5px;display:grid;gap:1px;font:13px/1.3 var(--f-ui);text-align:left}
 .add-menu .am-h{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:5px 8px 4px}
 .add-menu button{display:grid;grid-template-columns:22px 1fr;align-items:center;gap:8px;border:0;background:none;border-radius:6px;padding:6px 8px;cursor:pointer;text-align:left}
 .add-menu button:hover,.add-menu button:focus-visible{background:var(--surface-2)}
@@ -279,6 +273,7 @@ button,select,input{font:inherit;color:inherit}
 .fmt .fsel.size{width:62px}
 .fmt button{width:30px;height:30px;border:0;border-radius:6px;background:none;cursor:pointer;display:grid;place-items:center;padding:0}
 .fmt button:hover{background:var(--surface-2)}
+.fmt button[disabled]{opacity:.35;cursor:default;background:none}
 .fmt button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent)}
 .fmt svg{width:16px;height:16px}
 .fmt .tsep{width:1px;height:20px;background:var(--line);margin:0 3px}
@@ -469,6 +464,10 @@ footer.site{border-top:1px solid var(--line);padding-block:18px;color:var(--mute
   <span class="tsep"></span>
   <span class="color" title="Text color"><button tabindex="-1" aria-hidden="true"><b class="letter">A</b><span class="bar" id="fColorBar"></span></button><input type="color" id="fColor" value="#1b2130" aria-label="Text color"></span>
   <button data-cmd="removeFormat" title="Clear formatting" aria-label="Clear formatting"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3M9 20h6M12 4 8.5 20"/><path d="m15 13 6 6m0-6-6 6"/></svg></button>
+  <span class="tsep"></span>
+  <button data-bact="up" title="Move this block up" aria-label="Move block up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></button>
+  <button data-bact="down" title="Move this block down" aria-label="Move block down"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-6-6 6 6 6-6"/></svg></button>
+  <button data-bact="del" title="Delete this block" aria-label="Delete block"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button>
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
@@ -619,9 +618,6 @@ function renderBlock(b, i, n) {
   const w = el('div', 'blk blk-' + b.type); w.dataset.bid = b.id;
   if (b.type === 'meta') w.append(editable(b, 'html', 'meta-l'), editable(b, 'side', 'meta-r'));
   else w.append(editable(b, 'html'));
-  const t = el('div', 'blk-tools');
-  t.innerHTML = `<button data-act="up" aria-label="Move block up" title="Move up" ${i === 0 ? 'disabled' : ''}>${ICON.up}</button><button data-act="down" aria-label="Move block down" title="Move down" ${i === n - 1 ? 'disabled' : ''}>${ICON.down}</button><button data-act="del" aria-label="Delete block" title="Delete block">${ICON.del}</button>`;
-  w.append(t);
   return w;
 }
 function renderSection(n) {
@@ -835,13 +831,21 @@ function focusBlock(bid, selectAll) {
   const s = getSelection(); s.removeAllRanges(); s.addRange(r);
 }
 
-/* ---------- + menu inside a section ---------- */
-let addMenu = null;
+/* ---------- + menu (a fixed popover outside the page, so sections never clip it) ---------- */
+let addMenu = null, addBtn = null;
 function closeAddMenu() {
   if (!addMenu) return;
-  const btn = addMenu.parentElement && addMenu.parentElement.querySelector('.add-btn');
-  if (btn) btn.setAttribute('aria-expanded', 'false');
-  addMenu.remove(); addMenu = null;
+  if (addBtn && addBtn.isConnected) addBtn.setAttribute('aria-expanded', 'false');
+  addMenu.remove(); addMenu = null; addBtn = null;
+}
+function placeAddMenu() {
+  if (!addMenu || !addBtn || !addBtn.isConnected) return closeAddMenu();
+  const r = addBtn.getBoundingClientRect(), mw = addMenu.offsetWidth, mh = addMenu.offsetHeight;
+  const below = innerHeight - r.bottom, above = r.top;
+  let top = below >= mh + 8 || below >= above ? r.bottom + 6 : r.top - mh - 6;
+  top = Math.max(8, Math.min(innerHeight - mh - 8, top));
+  const left = Math.max(8, Math.min(innerWidth - mw - 8, r.right - mw));
+  addMenu.style.top = top + 'px'; addMenu.style.left = left + 'px';
 }
 function openAddMenu(btn) {
   const sid = btn.dataset.add;
@@ -850,32 +854,53 @@ function openAddMenu(btn) {
   select(sid);
   const m = el('div', 'add-menu'); m.dataset.sid = sid; m.setAttribute('role', 'menu');
   m.innerHTML = '<div class="am-h">Add to section</div>' + BLOCK_TYPES.map(t => `<button role="menuitem" data-type="${t[0]}"><span class="glyph">${t[1]}</span>${t[2]}</button>`).join('');
-  btn.parentElement.append(m); btn.setAttribute('aria-expanded', 'true');
-  addMenu = m; m.querySelector('button').focus();
+  document.body.append(m); btn.setAttribute('aria-expanded', 'true');
+  addMenu = m; addBtn = btn; placeAddMenu();
+  m.querySelector('button').focus({ preventScroll: true });
+  m.addEventListener('click', e => {
+    const mi = e.target.closest('button[data-type]'); if (!mi) return;
+    closeAddMenu(); addBlock(sid, mi.dataset.type);
+  });
+  m.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { const b = addBtn; closeAddMenu(); b && b.focus(); return; }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault(); const items = [...m.querySelectorAll('button')]; const i = items.indexOf(document.activeElement);
+      items[(i + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length].focus();
+    }
+  });
+}
+['scroll', 'resize'].forEach(ev => window.addEventListener(ev, placeAddMenu, { passive: true }));
+
+/* ---------- Block actions (move up / down / delete), shown in the formatting toolbar ---------- */
+function blockAction(act) {
+  const blk = activeEd && activeEd.closest('.blk'); if (!blk) return;
+  const bid = blk.dataset.bid, n = blockSec[bid]; if (!n) return;
+  const i = n.blocks.findIndex(b => b.id === bid);
+  if (act === 'del') {
+    n.blocks.splice(i, 1); commit(); toast('Block deleted · Ctrl+Z to undo');
+    const next = n.blocks[Math.min(i, n.blocks.length - 1)]; if (next) focusBlock(next.id);
+    return;
+  }
+  const j = act === 'up' ? i - 1 : i + 1;
+  if (j < 0 || j >= n.blocks.length) return;
+  [n.blocks[i], n.blocks[j]] = [n.blocks[j], n.blocks[i]];
+  commit(); focusBlock(bid);
 }
 
 /* ---------- Canvas events ---------- */
 paper.addEventListener('pointerdown', e => {
   if (e.target.closest('.divider')) return startDrag(e);
   const s = e.target.closest('.section');
-  if (s && !e.target.closest('.add-menu')) select(s.dataset.sid);
+  if (s) select(s.dataset.sid);
 });
 paper.addEventListener('click', e => {
-  const ab = e.target.closest('.add-btn'); if (ab) { e.stopPropagation(); return openAddMenu(ab); }
-  const mi = e.target.closest('.add-menu button'); if (mi) { const sid = addMenu.dataset.sid; closeAddMenu(); return addBlock(sid, mi.dataset.type); }
-  const act = e.target.closest('.blk-tools button');
-  if (act) {
-    const bid = act.closest('.blk').dataset.bid, n = blockSec[bid], i = n.blocks.findIndex(b => b.id === bid);
-    if (act.dataset.act === 'del') n.blocks.splice(i, 1);
-    else { const j = act.dataset.act === 'up' ? i - 1 : i + 1; if (j < 0 || j >= n.blocks.length) return; [n.blocks[i], n.blocks[j]] = [n.blocks[j], n.blocks[i]]; }
-    commit();
-    if (act.dataset.act !== 'del') focusBlock(bid);
-  }
+  const ab = e.target.closest('.add-btn'); if (ab) { e.stopPropagation(); openAddMenu(ab); }
 });
 document.addEventListener('pointerdown', e => {
   if (addMenu && !e.target.closest('.add-menu') && !e.target.closest('.add-btn')) closeAddMenu();
   if (!e.target.closest('#presetsMenu') && !e.target.closest('#presetsBtn')) togglePresets(false);
 });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#presetsMenu').hidden) { togglePresets(false); $('#presetsBtn').focus(); } });
 paper.addEventListener('input', e => {
   const t = e.target.closest('.editable'); if (!t) return;
   if (t.dataset.field === 'title') {
@@ -890,11 +915,6 @@ paper.addEventListener('keydown', e => {
   const t = e.target;
   if (t.classList && t.classList.contains('sec-title') && e.key === 'Enter') { e.preventDefault(); t.blur(); }
   if (t.classList && t.classList.contains('divider')) return dividerKey(e);
-  if (addMenu && e.key === 'Escape') { const b = addMenu.parentElement.querySelector('.add-btn'); closeAddMenu(); b && b.focus(); }
-  if (addMenu && (e.key === 'ArrowDown' || e.key === 'ArrowUp') && addMenu.contains(t)) {
-    e.preventDefault(); const items = [...addMenu.querySelectorAll('button')]; const i = items.indexOf(t);
-    items[(i + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length].focus();
-  }
 });
 paper.addEventListener('paste', e => {
   const t = e.target.closest && e.target.closest('.editable'); if (!t) return;
@@ -1000,6 +1020,12 @@ function place(r, ed) {
   fmt.style.top = top + 'px'; fmt.style.left = left + 'px';
 }
 function syncFmt() {
+  const blk = activeEd && activeEd.closest('.blk'), n = blk && blockSec[blk.dataset.bid];
+  if (n) {
+    const i = n.blocks.findIndex(b => b.id === blk.dataset.bid);
+    fmt.querySelector('[data-bact="up"]').disabled = i <= 0;
+    fmt.querySelector('[data-bact="down"]').disabled = i >= n.blocks.length - 1;
+  }
   fmt.querySelectorAll('[data-cmd]').forEach(b => {
     let on = false; try { on = document.queryCommandState(b.dataset.cmd); } catch (e) {}
     if (b.dataset.cmd !== 'removeFormat') b.setAttribute('aria-pressed', on);
@@ -1030,7 +1056,10 @@ function exec(cmd, val) {
 }
 fmt.addEventListener('mousedown', e => { if (e.target.closest('button')) e.preventDefault(); });
 fmt.addEventListener('pointerdown', e => { if (e.target.closest('button')) e.preventDefault(); });
-fmt.addEventListener('click', e => { const b = e.target.closest('[data-cmd]'); if (b) exec(b.dataset.cmd); });
+fmt.addEventListener('click', e => {
+  const b = e.target.closest('[data-cmd]'); if (b) return exec(b.dataset.cmd);
+  const ba = e.target.closest('[data-bact]'); if (ba) blockAction(ba.dataset.bact);
+});
 fFont.addEventListener('change', () => { if (fFont.value) exec('fontName', fFont.value); });
 fSize.addEventListener('change', () => {
   const px = fSize.value; if (!px || !restore()) return;
